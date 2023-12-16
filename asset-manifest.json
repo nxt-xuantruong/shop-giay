@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shop-giay/static/css/main.58f147e7.css",
+    "main.js": "/shop-giay/static/js/main.fa023321.js",
+    "static/js/787.81f046e4.chunk.js": "/shop-giay/static/js/787.81f046e4.chunk.js",
+    "index.html": "/shop-giay/index.html",
+    "main.58f147e7.css.map": "/shop-giay/static/css/main.58f147e7.css.map",
+    "main.fa023321.js.map": "/shop-giay/static/js/main.fa023321.js.map",
+    "787.81f046e4.chunk.js.map": "/shop-giay/static/js/787.81f046e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58f147e7.css",
+    "static/js/main.fa023321.js"
+  ]
+}
