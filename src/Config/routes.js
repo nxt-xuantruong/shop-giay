@@ -10,6 +10,7 @@ import SearchResult from "../Page/SearchResult/SearchResult";
 import Account from "../Page/Account/Account";
 import Admin from "../Page/Admin/Admin";
 import AdminLogin from "../Page/AdminLogin/AdminLogin";
+import Pay from "../Page/Pay/Pay";
 
 export const routesConfig = [
   { path: "/", component: Home },
@@ -28,6 +29,7 @@ export const routesConfig = [
   },
   { path: "/cart", component: Cart },
   { path: "/user/:type", component: Account },
+  { path: "/pay", component: Pay },
 ];
 
 export const privateRoute = [

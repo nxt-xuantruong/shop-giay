@@ -123,6 +123,17 @@ function ProductDetail() {
       }
     }
   };
+
+  const handleBuyNow = (product) => {
+    const newProduct = {
+      ...product,
+      selectedSize,
+      quantity: 1,
+    };
+    localStorage.setItem("buyNow", JSON.stringify(newProduct));
+    navigate("/pay");
+  };
+
   return (
     <div className="mainContent">
       <div className="infoProduct">
@@ -179,7 +190,11 @@ function ProductDetail() {
             >
               Thêm vào giỏ hàng
             </button>
-            <button disabled={!selectedSize && true} className="btnPay">
+            <button
+              disabled={!selectedSize && true}
+              className="btnPay"
+              onClick={() => handleBuyNow(product)}
+            >
               Mua ngay
             </button>
           </div>

@@ -18,6 +18,7 @@ function TabContent({ tab }) {
   const adminAccount = useSelector((state) => state.admin.admins);
   const users = useSelector((state) => state.users.users);
   const products = useSelector((state) => state.products.products);
+  const orders = useSelector((state) => state.orders.orders);
 
   const [openModal, setOpenModal] = useState(false);
   const [tabTitle, setTabTitle] = useState("");
@@ -71,6 +72,37 @@ function TabContent({ tab }) {
   }, [tab]);
   const renderContent = () => {
     switch (tab) {
+      case "orders":
+        return (
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Khách hàng</th>
+                <th>Địa chỉ</th>
+                <th>Sản phẩm</th>
+                <th>Tổng giá</th>
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((order, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{order.customerInfo.fullName}</td>
+                    <td>{order.customerInfo.address}</td>
+                    <td>
+                      {order.orderProduct.map((product, idx) => (
+                        <div key={idx}>{product.name}</div>
+                      ))}
+                    </td>
+                    <td>{order.orderTotal}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        );
       case "accountUsers":
         return (
           <table>

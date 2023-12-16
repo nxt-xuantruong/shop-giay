@@ -27,7 +27,6 @@ function ProductForm({ selectedProduct }) {
       setProduct(selectedProduct);
     }
   }, [selectedProduct]);
-  console.log(selectedProduct);
   console.log(product);
 
   const categorySlugMap = products.reduce((acc, item) => {
@@ -170,7 +169,7 @@ function ProductForm({ selectedProduct }) {
       <div>
         <label>Image Descriptions:</label>
         <textarea
-          value={product.img_desc}
+          value={selectedProduct && product.img_desc}
           placeholder="link 1,link 2,..."
           onChange={handleImgURLChange}
           rows={4}

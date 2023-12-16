@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { deleteCart } from "../../Config/store/cart";
 
 import "./Cart.css";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const cart = useSelector((state) => state.cart.cart);
@@ -73,6 +74,11 @@ function Cart() {
           </tr>
         </tbody>
       </table>
+      {userCart.length > 0 && (
+        <button>
+          <Link to="/pay">Thanh toán</Link>
+        </button>
+      )}
     </div>
   );
 }
