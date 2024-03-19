@@ -1,0 +1,54 @@
+.adminHeader{
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px 10px 1px #ccc;
+    position: absolute;
+    top: 0;
+    height: 60px;
+}
+
+.adminHeader h2{
+    width: 300px;
+    text-align: center;
+}
+
+.adminHeader p{
+    margin-right: 120px;
+}
+
+.adminContent{
+    margin-top: 60px;
+    display: flex;
+}
+
+
+.adminContent .slidebar{
+    width: 300px;
+    list-style: none;
+    padding: 0;
+    height: 100vh;
+
+}
+
+.adminContent .slidebar li{
+    padding:14px 10px;
+    cursor: pointer;
+}
+
+.adminContent .slidebar li:hover{
+    background-color: #ccc;
+}
+
+.iconFolder{
+    margin-right: 10px;
+}
+
+.adminContainer{
+    flex: 1;
+    background-color: #ccc;
+    padding: 20px;
+}
+
